@@ -1,0 +1,31 @@
+﻿@model List<KitapListesiCMS.KitapListesi>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+   <h2>Kitaplar</h2>
+    <table>
+        <tr>
+            <th>İşlem</th>
+            <th>ID</th>
+            <th>KitapAdı</th>
+            <th>Yazar</th>
+            <th>Fiyat</th>
+            <th>Tarih</th>
+        </tr>
+            @foreach(var item in Model)
+            {
+        <tr>
+            <td><a href="@("/Home/Guncelle?id="+ item.Id)">[Düzenle]</a>
+                <a href="@("/Home/Sil?id="+ item.Id)">[Sil]</a></td>
+            <td>@item.Id</td>
+            <td>@item.KitapAdi</td>
+            <td>@item.Yazar </td>
+            <td>@item.Fiyat</td>
+            <td>@Convert.ToDateTime(item.Tarih).ToShortDateString()</td>
+        </tr>
+            }
+        
+    </table>
+</div>

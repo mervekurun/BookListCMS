@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kitap Guncelle</h2>
+<form method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    Kitap Adı: <input type="text" name="kitapAdi" value="@Model.KitapAdi"/>
+    Yazar: <input type="text" name="yazar" value="@Model.Yazar" />
+    Fiyat: <input type="text" name="fiyat" value="@Model.Fiyat"/>
+    Tarih: <input type="date" name="tarih" value="@Convert.ToDateTime(Model.Tarih).ToString("yyyy-MM-dd")"/>
+    <button type="submit">Güncelle</button>
+</form>

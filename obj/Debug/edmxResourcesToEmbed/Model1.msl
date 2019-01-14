@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KitaplarModelStoreContainer" CdmEntityContainer="KitaplarEntities">
+    <EntitySetMapping Name="KitapListesi">
+      <EntityTypeMapping TypeName="KitaplarModel.KitapListesi">
+        <MappingFragment StoreEntitySet="KitapListesi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KitapAdi" ColumnName="KitapAdi" />
+          <ScalarProperty Name="Yazar" ColumnName="Yazar" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
